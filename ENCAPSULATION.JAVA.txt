@@ -1,0 +1,69 @@
+public class Motor_bike {
+	// state
+	private int speed; // member_veriable-**speed**
+
+	public int getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(int speed) {
+		if (speed > 0)
+		 {
+			this.speed = speed;
+//		System.out.println(speed);
+//		System.out.println(this.speed);
+		}
+
+	}
+
+	public void increseSpeed(int howMuch) {
+		this.speed += howMuch;
+	}
+
+	public void dicreseSpeed(int howMuch) {
+		setSpeed(this.speed - howMuch);
+	}
+
+	// behaviour
+	void Start() {
+
+		System.out.println("bike started");
+	};
+
+}
+
+
+public class MotorBike_runner {
+
+	public static void main(String[] args) {
+		Motor_bike Ducati = new Motor_bike();
+		Motor_bike Honda = new Motor_bike();
+		
+		Ducati.Start();
+		Honda.Start();
+
+		Ducati.setSpeed(100);
+		Ducati.increseSpeed(50);
+		Ducati.dicreseSpeed(151);
+//		System.out.println(Ducati.getSpeed());
+//		Honda.setSpeed(50);
+//		System.out.println(Honda.getSpeed());
+//
+//		Ducati.setSpeed(120);
+//		System.out.println(Ducati.getSpeed());
+//		Honda.setSpeed(150);
+//		System.out.println(Honda.getSpeed());
+
+//		int ducatiSepeed = Ducati.getSpeed();
+//		ducatiSepeed += 220;
+//		Ducati.setSpeed(ducatiSepeed);
+
+
+		System.out.println(Ducati.getSpeed());
+
+	}
+
+}
+
+
+
