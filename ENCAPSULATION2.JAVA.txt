@@ -1,0 +1,44 @@
+public class Book {
+	private int noOfCopy;
+
+	public void setNoCopy(int noOfCopy) {
+		if (this.noOfCopy > 0) {
+			this.noOfCopy = noOfCopy;
+		}
+	}
+
+	public int getNoCopy() {
+		return noOfCopy;
+	}
+
+	public void increaseCopy(int IncreseNumOfCopy) {
+		this.noOfCopy += IncreseNumOfCopy;
+	}
+
+	public void DecreaseCopy(int IncreseNumOfCopy) {
+
+		setNoCopy(this.noOfCopy - IncreseNumOfCopy);
+	}
+}
+
+package Oopss;
+
+public class BookRunner {
+
+	public static void main(String[] args) {
+		Book LoveBite = new Book();
+		Book Gita = new Book();
+		Book Gossipe = new Book();
+
+//		LoveBite.setNoCopy(1);
+//		Gita.setNoCopy(150);
+		Gossipe.setNoCopy(50);
+
+		Gossipe.DecreaseCopy(52);
+
+		System.out.println(Gossipe.getNoCopy());
+
+	}
+
+}
+ 
