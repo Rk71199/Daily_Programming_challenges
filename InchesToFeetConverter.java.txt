@@ -1,0 +1,34 @@
+package Oopss;
+
+public class InchesToFeet {
+	private int feet;
+	private int inches;
+
+	public InchesToFeet(int inches) {
+		this.inches = inches <= 0 ? inches : inches % 12;
+		this.feet = inches <= 0 ? inches : inches / 12;
+	}
+
+	public int getFeet() {
+		return feet;
+
+	}
+
+	public int getInches() {
+		return inches;
+	}
+}
+
+package Oopss;
+
+public class InchesToFeet_Runner {
+
+	public static void main(String[] args) {
+		InchesToFeet con = new InchesToFeet(12);
+
+		System.out.println(con.getFeet());
+		System.out.println(con.getInches());
+
+	}
+
+}
