@@ -9,7 +9,6 @@ public class Day_to_Year {
 		int months =days/30; days-=30*months;
 		int weeks = days/7; 
 		int day=days-=7*weeks;
-       
 		System.out.println("Year:Months:weeks:Days "+ year +" "+months+" "+weeks+" "+ day);
 	}
 
