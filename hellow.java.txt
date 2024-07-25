@@ -1,0 +1,71 @@
+package day3;
+
+public class IsVowel {
+
+	private char ch;
+
+	public IsVowel(char ch) {
+		this.ch = ch;
+
+	}
+
+	public boolean IsVow() {
+		if (ch == 'a' || ch == 'A') {
+			return true;
+		}
+		if (ch == 'e' || ch == 'E') {
+			return true;
+		}
+		if (ch == 'i' || ch == 'I') {
+			return true;
+		}
+		if (ch == 'o' || ch == 'O') {
+			return true;
+		}
+		if (ch == 'u' || ch == 'U') {
+			return true;
+		}
+		if (ch == 'w' || ch == 'W') {
+			return true;
+		}
+		return false;
+	}
+
+	public boolean IsAlpha() {
+		if (ch == 65 || ch == 97) {
+			return true;
+		}
+		if (ch == 69 || ch == 101) {
+			return true;
+		}
+		if (ch == 73 || ch == 105) {
+			return true;
+		}
+		if (ch == 79 || ch == 111) {
+			return true;
+		}
+		if (ch == 85 || ch == 117) {
+			return true;
+		}
+		if (ch == 87 || ch == 119) {
+			return true;
+		}
+		return false;
+	}
+
+	public boolean isconsolent() {
+		if (IsVow() && IsAlpha()) {
+			return false;
+		}
+		return true;
+	}
+
+	public static void main(String[] args) {
+		IsVowel Obj = new IsVowel('a');
+		System.out.println(Obj.IsVow());
+		System.out.println(Obj.IsAlpha());
+		System.out.println(Obj.isconsolent());
+
+	}
+
+}
